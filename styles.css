@@ -1,0 +1,8 @@
+.container {
+    margin-top: 50px;
+}
+
+#output-image {
+    max-width: 100%;
+    height: auto;
+}
