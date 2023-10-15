@@ -90,18 +90,14 @@ function generateImage() {
 }
 
 // Add event listeners to all input fields for real-time updates
-const inputFields = document.getElementsByClassName('form-control');
-for (let i = 0; i < inputFields.length; i++) {
-    inputFields[i].addEventListener('input', generateImage);
-}
-
-// Call the initial image generation
-generateImage();
-
+const inputFields = document.querySelectorAll('.form-control');
+inputFields.forEach((inputField) => {
+    inputField.addEventListener('input', generateImage);
+});
 
 
 // Add event listener to the "Download Image" button
-document.getElementById('download-image').addEventListener('click', function () {
+document.getElementById('download-button').addEventListener('click', function () {
     const image = document.getElementById('output-image').src;
     const link = document.createElement('a');
     link.href = image;
@@ -110,3 +106,5 @@ document.getElementById('download-image').addEventListener('click', function () 
 });
 
 
+// Call the initial image generation
+generateImage();
