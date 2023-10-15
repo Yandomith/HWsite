@@ -11,60 +11,79 @@
 </head>
 <body>
     
+    <h1 class="text-center">HAHA huhu</h1>
     <div class="container">
-        <h1>HAHA huhu</h1>
-        <div class="form-group">
-            <label for="text-input">Enter Text:</label>
-            <textarea class="form-control" id="text-input" placeholder="Enter text..." rows="4"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="image-width">Image Width (pixels):</label>
-            <input type="number" class="form-control" id="image-width" placeholder="Enter image width (pixels)" value="595">
-        </div>
-        <div class="form-group">
-            <label for="image-height">Image Height (pixels):</label>
-            <input type="number" class="form-control" id="image-height" placeholder="Enter image height (pixels)" value="842">
-        </div>
-        <div class="form-group">
-            <label for="top-margin">Top Margin (pixels):</label>
-            <input type="number" class="form-control" id="top-margin" placeholder="Enter top margin (pixels)" value="100">
-        </div>
-        <div class="form-group">
-            <label for="bottom-margin">Bottom Margin (pixels):</label>
-            <input type="number" class="form-control" id="bottom-margin" placeholder="Enter bottom margin (pixels)" value="0">
-        </div>
-        <div class="form-group">
-            <label for="left-margin">Left Margin (pixels):</label>
-            <input type="number" class="form-control" id="left-margin" placeholder="Enter left margin (pixels)" value="80">
-        </div>
-        <div class="form-group">
-            <label for="right-margin">Right Margin (pixels):</label>
-            <input type="number" class="form-control" id="right-margin" placeholder="Enter right margin (pixels)" value="60">
-        </div>
-        <div class="form-group">
-            <label for="text-size">Text Size (pixels):</label>
-            <input type="number" class="form-control" id="text-size" placeholder="Enter text size (pixels)" value="15">
-        </div>
-        <div class="form-group">
-            <label for="text-color">Text Color:</label>
-            <input type="color" class="form-control" id="text-color" value="#000000">
+        <div class="row">
+            <div class="col-md-6">
+                
+                <h2 class="text-center"> Edit Content here:</h2>
+
+                <div class="form-group">
+                    <label for="text-input">Enter Text:</label>
+                    <textarea class="form-control" id="text-input" placeholder="Enter text..." rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="image-width">Image Width (pixels):</label>
+                    <input type="number" class="form-control" id="image-width" placeholder="Enter image width (pixels)" value="595">
+                </div>
+                <div class="form-group">
+                    <label for="image-height">Image Height (pixels):</label>
+                    <input type="number" class="form-control" id="image-height" placeholder="Enter image height (pixels)" value="842">
+                </div>
+                <div class="form-group">
+                    <label for="top-margin">Top Margin (pixels):</label>
+                    <input type="number" class="form-control" id="top-margin" placeholder="Enter top margin (pixels)" value="100">
+                </div>
+                <div class="form-group">
+                    <label for="bottom-margin">Bottom Margin (pixels):</label>
+                    <input type="number" class="form-control" id="bottom-margin" placeholder="Enter bottom margin (pixels)" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="left-margin">Left Margin (pixels):</label>
+                    <input type="number" class="form-control" id="left-margin" placeholder="Enter left margin (pixels)" value="80">
+                </div>
+                <div class="form-group">
+                    <label for="right-margin">Right Margin (pixels):</label>
+                    <input type="number" class="form-control" id="right-margin" placeholder="Enter right margin (pixels)" value="60">
+                </div>
+                <div class="form-group">
+                    <label for="text-size">Text Size (pixels):</label>
+                    <input type="number" class="form-control" id="text-size" placeholder="Enter text size (pixels)" value="15">
+                </div>
+                <div class="form-group">
+                    <label for="text-color">Text Color:</label>
+                    <input type="color" class="form-control" id="text-color" value="#000000">
+                </div>
+
+                <div class="form-group">
+                    <label for="line-spacing">Line Spacing (pixels):</label>
+                    <input type="number" class="form-control" id="line-spacing" placeholder="Enter line spacing (pixels)" value="5">
+                </div>
+                <div class="form-group">
+                    <label for="background-image">Background Image:</label>
+                    <input type="file" class="form-control-file" id="background-image">
+                </div>
+
+
+
+                <button class="btn btn-primary" id="generate-image">Generate Custom Size Image</button>
+
+
+
+             </div>
+
+            <button class="btn btn-success mt-2" id="download-image" style="display:none;">Download Image</button>
+        
+        <div class="col-md-6">
+            <div class="mt-4">
+                <h2 class="text-center">Generated Image:</h2>
+                <img src="" id="output-image" alt="Generated Image">
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="line-spacing">Line Spacing (pixels):</label>
-            <input type="number" class="form-control" id="line-spacing" placeholder="Enter line spacing (pixels)" value="5">
-        </div>
-        <div class="form-group">
-            <label for="background-image">Background Image:</label>
-            <input type="file" class="form-control-file" id="background-image">
-        </div>
-
-        <button class="btn btn-primary" id="generate-image">Generate Custom Size Image</button>
-        <button class="btn btn-success mt-2" id="download-image" style="display:none;">Download Image</button>
-        <div class="mt-4">
-            <h2>Generated Image:</h2>
-            <img src="" id="output-image" alt="Generated Image">
-        </div>
+        
+    </div>
+    
     </div>
 
     <!-- Include Bootstrap and jQuery JS -->
