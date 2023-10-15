@@ -1,8 +1,10 @@
 // Function to generate the custom size image with customization
 function generateImage() {
     const text = document.getElementById('text-input').value;
-    const imageWidth = parseInt(document.getElementById('image-width').value);
-    const imageHeight = parseInt(document.getElementById('image-height').value);
+
+    const imageWidth = 2480; // Set to A4 width in millimeters
+    const imageHeight = 3508; // Set to A4 height in millimeters
+
     const topMargin = parseInt(document.getElementById('top-margin').value);
     const bottomMargin = parseInt(document.getElementById('bottom-margin').value);
     const leftMargin = parseInt(document.getElementById('left-margin').value);
@@ -28,7 +30,10 @@ function generateImage() {
             const backgroundImage = new Image();
             backgroundImage.src = selectedBackground; // Use the selected background image URL
             backgroundImage.onload = function () {
+                backgroundImage.width = canvas.width;
+                backgroundImage.height = canvas.height;
                 context.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+
                 drawText();
             };
         } else {
