@@ -52,23 +52,33 @@ function generateImage() {
             const availableWidth = canvas.width - leftMargin - rightMargin;
 
             // Split text into lines and handle wrapping
+            // Split text into lines and handle wrapping and line breaks
+           // Split text into lines and handle wrapping and line breaks
             const lines = [];
-            const words = text.split(' ');
-            let currentLine = '';
+            const paragraphs = text.split('\n'); // Split text into paragraphs using Enter key
 
-            for (let i = 0; i < words.length; i++) {
-                const testLine = currentLine + words[i] + ' ';
-                const testWidth = context.measureText(testLine).width;
+            paragraphs.forEach((paragraph) => {
+                const words = paragraph.split(' ');
+                let currentLine = '';
 
-                if (testWidth > availableWidth && i > 0) {
-                    lines.push(currentLine.trim());
-                    currentLine = words[i] + ' ';
-                } else {
-                    currentLine = testLine;
+                for (let i = 0; i < words.length; i++) {
+                    const testLine = currentLine + words[i] + ' ';
+                    const testWidth = context.measureText(testLine).width;
+
+                    if (testWidth > availableWidth && i > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = words[i] + ' ';
+                    } else {
+                        currentLine = testLine;
+                    }
                 }
-            }
 
-            lines.push(currentLine.trim());
+                lines.push(currentLine.trim());
+            });
+
+// Now the code consistently handles both text wrapping and line breaks (Enter key)
+
+
 
             // Calculate vertical position to align text to the top
             let y = topMargin;
