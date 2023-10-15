@@ -1,4 +1,5 @@
-document.getElementById('generate-image').addEventListener('click', function () {
+// Function to generate the custom size image with customization
+function generateImage() {
     const text = document.getElementById('text-input').value;
     const imageWidth = parseInt(document.getElementById('image-width').value);
     const imageHeight = parseInt(document.getElementById('image-height').value);
@@ -97,4 +98,13 @@ document.getElementById('generate-image').addEventListener('click', function () 
     } else {
         alert('Please enter text to generate an image.');
     }
-});
+}
+
+// Add event listeners to all input fields for real-time updates
+const inputFields = document.getElementsByClassName('form-control');
+for (let i = 0; i < inputFields.length; i++) {
+    inputFields[i].addEventListener('input', generateImage);
+}
+
+// Call the initial image generation
+generateImage();
