@@ -1,4 +1,3 @@
-// Function to generate the custom size image with customization
 document.getElementById('generate-image').addEventListener('click', function () {
     const text = document.getElementById('text-input').value;
     const imageWidth = parseInt(document.getElementById('image-width').value);
@@ -10,8 +9,8 @@ document.getElementById('generate-image').addEventListener('click', function () 
     const textSize = parseInt(document.getElementById('text-size').value);
     const textColor = document.getElementById('text-color').value;
     const lineSpacing = parseInt(document.getElementById('line-spacing').value);
-    const backgroundImageInput = document.getElementById('background-image');
-    const backgroundImageFile = backgroundImageInput.files[0];
+    const backgroundSelect = document.getElementById('background-select');
+    const selectedBackground = backgroundSelect.value; // Get the selected background image
 
     if (text.trim() !== '') {
         const canvas = document.createElement('canvas');
@@ -23,10 +22,10 @@ document.getElementById('generate-image').addEventListener('click', function () 
         context.fillStyle = '#FFFFFF';
         context.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Draw background image if provided
-        if (backgroundImageFile) {
+        // Draw selected background image if provided
+        if (selectedBackground) {
             const backgroundImage = new Image();
-            backgroundImage.src = URL.createObjectURL(backgroundImageFile);
+            backgroundImage.src = selectedBackground; // Use the selected background image URL
             backgroundImage.onload = function () {
                 context.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
                 drawText();
