@@ -83,17 +83,6 @@ function generateImage() {
             // Display the generated image
             const outputImage = document.getElementById('output-image');
             outputImage.src = image;
-
-            // Show the download button
-            document.getElementById('download-image').style.display = 'block';
-
-            // Add event listener to the download button
-            document.getElementById('download-image').addEventListener('click', function () {
-                const link = document.createElement('a');
-                link.href = image;
-                link.download = 'generated_image.png';
-                link.click();
-            });
         }
     } else {
         alert('Please enter text to generate an image.');
@@ -108,3 +97,16 @@ for (let i = 0; i < inputFields.length; i++) {
 
 // Call the initial image generation
 generateImage();
+
+
+
+// Add event listener to the "Download Image" button
+document.getElementById('download-image').addEventListener('click', function () {
+    const image = document.getElementById('output-image').src;
+    const link = document.createElement('a');
+    link.href = image;
+    link.download = 'generated_image.png';
+    link.click();
+});
+
+
