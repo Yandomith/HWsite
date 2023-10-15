@@ -4,7 +4,7 @@ function generateImage() {
 
     const imageWidth = 2480; // Set to A4 width in millimeters
     const imageHeight = 3508; // Set to A4 height in millimeters
-
+    const textOpacity = parseFloat(document.getElementById('text-opacity').value); // Get text opacity value
     const topMargin = parseInt(document.getElementById('top-margin').value);
     const bottomMargin = parseInt(document.getElementById('bottom-margin').value);
     const leftMargin = parseInt(document.getElementById('left-margin').value);
@@ -41,7 +41,8 @@ function generateImage() {
         }
 
         function drawText() {
-            context.fillStyle = textColor; // Text color
+            context.globalAlpha = textOpacity; // Set text opacity
+            context.fillStyle = textColor; // Text color with opacity
             context.font = textSize + 'px Arial'; // Font size and style
             context.textBaseline = 'top'; // Start text from the top
 
@@ -75,10 +76,6 @@ function generateImage() {
 
                 lines.push(currentLine.trim());
             });
-
-// Now the code consistently handles both text wrapping and line breaks (Enter key)
-
-
 
             // Calculate vertical position to align text to the top
             let y = topMargin;
