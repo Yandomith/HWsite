@@ -14,74 +14,73 @@
     <h1 class="text-center">HAHA huhu</h1>
     <div class="container">
         <div class="row">
-        <div class="col-md-6">
-                
+            <div class="col-md-6">
+                    
                 <h2 class="text-center"> Edit Content here:</h2>
 
-                            <!-- Add labels for input fields -->
-            <div class="form-group">
-                <label for="text-input">Enter Text:</label>
-                <textarea class="form-control" id="text-input" placeholder="Enter text..." rows="4"></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="top-margin">Top Margin (pixels):</label>
-                <input type="number" class="form-control" id="top-margin" placeholder="Enter top margin (pixels)" value="0">
-            </div>
-            <div class="form-group">
-                <label for="bottom-margin">Bottom Margin (pixels):</label>
-                <input type="number" class="form-control" id="bottom-margin" placeholder="Enter bottom margin (pixels)" value="0">
-            </div>
-            <div class="form-group">
-                <label for="left-margin">Left Margin (pixels):</label>
-                <input type="number" class="form-control" id="left-margin" placeholder="Enter left margin (pixels)" value="0">
-            </div>
-            <div class="form-group">
-                <label for="right-margin">Right Margin (pixels):</label>
-                <input type="number" class="form-control" id="right-margin" placeholder="Enter right margin (pixels)" value="0">
-            </div>
-            <div class="form-group">
-                <label for="text-size">Text Size (pixels):</label>
-                <input type="number" class="form-control" id="text-size" placeholder="Enter text size (pixels)" value="20">
-            </div>
-            <div class="form-group">
-                <label for="text-color">Text Color:</label>
-                <input type="color" class="form-control" id="text-color" value="#000000">
-            </div>
-            <div class="form-group">
-                <label for="background-select">Background Image:</label>
-                <select class="form-control" id="background-select">
-                    <option value="">None</option>
-                    <option value="1.jpg">Background 1</option>
-                    <option value="background2.jpg">Background 2</option>
-                    <!-- Add more options as needed -->
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="line-spacing">Line Spacing (pixels):</label>
-                <input type="number" class="form-control" id="line-spacing" placeholder="Enter line spacing (pixels)" value="5">
-            </div>
+                                <!-- Add labels for input fields -->
+                <div class="form-group">
+                    <label for="text-input">Enter Text:</label>
+                    <textarea class="form-control" id="text-input" placeholder="Enter text..." rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="top-margin">Top Margin (pixels):</label>
+                    <input type="number" class="form-control" id="top-margin" placeholder="Enter top margin (pixels)" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="bottom-margin">Bottom Margin (pixels):</label>
+                    <input type="number" class="form-control" id="bottom-margin" placeholder="Enter bottom margin (pixels)" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="left-margin">Left Margin (pixels):</label>
+                    <input type="number" class="form-control" id="left-margin" placeholder="Enter left margin (pixels)" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="right-margin">Right Margin (pixels):</label>
+                    <input type="number" class="form-control" id="right-margin" placeholder="Enter right margin (pixels)" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="text-size">Text Size (pixels):</label>
+                    <input type="number" class="form-control" id="text-size" placeholder="Enter text size (pixels)" value="20">
+                </div>
+                <div class="form-group">
+                    <label for="text-color">Text Color:</label>
+                    <input type="color" class="form-control" id="text-color" value="#000000">
+                </div>
+                <div class="form-group">
+                    <label for="background-select">Background Image:</label>
+                    <select class="form-control" id="background-select">
+                        <option value="">None</option>
+                        <option value="1.jpg">Background 1</option>
+                        <option value="background2.jpg">Background 2</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="line-spacing">Line Spacing (pixels):</label>
+                    <input type="number" class="form-control" id="line-spacing" placeholder="Enter line spacing (pixels)" value="5">
+                </div>
          </div>
         
-        <div class="col-md-6">
-           
+        <div class="col-md-6">           
             <div class="mt-4">
                 <h2 class="text-center">Generated Image:</h2>
                 <img src="" id="output-image" alt="Generated Image">
             </div>
-            
+            <button class="btn btn-primary mt-4" id="download-button">Download Image</button>
+        </div>
+        
         </div>
     </div>
-    <div class="row ">
-        <!-- Include a button to trigger image download -->
-        <button class="btn btn-primary" id="download-button">Download Image</button>
-
-    </div>
    
+                
+          
+
         
     
     
-    </div>
+
 
     <!-- Include Bootstrap and jQuery JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
