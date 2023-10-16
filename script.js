@@ -9,7 +9,7 @@ function generateImage() {
     const rightMargin = parseInt(document.getElementById('right-margin').value);
     const textSize = parseInt(document.getElementById('text-size').value);
     const textColor = document.getElementById('text-color').value;
-    const lineSpacing = Math.abs(parseInt(document.getElementById('line-spacing').value));  
+    const lineSpacing = parseInt(document.getElementById('line-spacing').value);
     const backgroundSelect = document.getElementById('background-select');
     const selectedBackground = backgroundSelect.value;
 
