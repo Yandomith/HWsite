@@ -9,9 +9,13 @@ function generateImage() {
     const rightMargin = parseInt(document.getElementById('right-margin').value);
     const textSize = parseInt(document.getElementById('text-size').value);
     const textColor = document.getElementById('text-color').value;
-    const lineSpacing = parseInt(document.getElementById('line-spacing').value);
+    const lineSpacing = Math.abs(parseInt(document.getElementById('line-spacing').value));  
     const backgroundSelect = document.getElementById('background-select');
     const selectedBackground = backgroundSelect.value;
+
+     // Get the selected font from the dropdown
+     const fontSelect = document.getElementById('font-select');
+     const selectedFont = fontSelect.value;
 
     if (text.trim() !== '') {
         const canvas = document.createElement('canvas');
@@ -38,7 +42,7 @@ function generateImage() {
         function drawText() {
             context.globalAlpha = textOpacity;
             context.fillStyle = textColor;
-            context.font = textSize + 'px Arial';
+            context.font = textSize + 'px ' + selectedFont; // Update the font setting based on user selection
             context.textBaseline = 'top';
 
             const availableHeight = canvas.height - topMargin - bottomMargin;
