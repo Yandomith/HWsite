@@ -14,12 +14,13 @@ function generateImage() {
     const lineSpacing = parseInt(document.getElementById('line-spacing').value);
     const backgroundSelect = document.getElementById('background-select');
     const selectedBackground = backgroundSelect.value;
+    const overlaySelect = document.getElementById('overlay-select');
+    const selectedOverlay = overlaySelect.value;
     const fontSelect = document.getElementById('font-select');
     const selectedFont = fontSelect.value;
 
     canvas.width = imageWidth;
     canvas.height = imageHeight;
-
     context.fillStyle = '#FFFFFF';
     context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -31,7 +32,6 @@ function generateImage() {
 
         const availableHeight = canvas.height - topMargin - bottomMargin;
         const availableWidth = canvas.width - leftMargin - rightMargin;
-
         const lines = [];
         const paragraphs = text.split('\n');
 
@@ -69,18 +69,31 @@ function generateImage() {
     if (text) {
         if (selectedBackground) {
             const backgroundImage = new Image();
-            backgroundImage.src = 'background/'+selectedBackground;
+            backgroundImage.src = 'background/' + selectedBackground;
             backgroundImage.onload = function () {
                 backgroundImage.width = canvas.width;
                 backgroundImage.height = canvas.height;
                 context.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+                applyOverlayEffect();
+            };
+        } else {
+            applyOverlayEffect();
+        }
+    } else {
+        alert('Please enter text to generate an image.');
+    }
+
+    function applyOverlayEffect() {
+        if (selectedOverlay) {
+            const overlayImage = new Image();
+            overlayImage.src = 'overlays/' + selectedOverlay;
+            overlayImage.onload = function () {
+                context.drawImage(overlayImage, 0, 0, canvas.width, canvas.height);
                 drawText();
             };
         } else {
             drawText();
         }
-    } else {
-        alert('Please enter text to generate an image.');
     }
 }
 
@@ -99,4 +112,5 @@ downloadButton.addEventListener('click', function () {
     link.click();
 });
 
+// Call the initial image generation
 generateImage();
