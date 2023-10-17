@@ -69,7 +69,7 @@ function generateImage() {
     if (text) {
         if (selectedBackground) {
             const backgroundImage = new Image();
-            backgroundImage.src = selectedBackground;
+            backgroundImage.src = 'background/'+selectedBackground;
             backgroundImage.onload = function () {
                 backgroundImage.width = canvas.width;
                 backgroundImage.height = canvas.height;
