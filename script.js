@@ -79,8 +79,6 @@ function generateImage() {
         } else {
             applyOverlayEffect();
         }
-    } else {
-        alert('Please enter text to generate an image.');
     }
 
     function applyOverlayEffect() {
