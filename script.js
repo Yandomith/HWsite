@@ -2,8 +2,8 @@ function generateImage() {
     const text = document.getElementById('text-input').value.trim();
     const canvas = document.createElement('canvas');
     const context = canvas.getContext('2d');
-    const imageWidth = 2480; // A4 width in millimeters
-    const imageHeight = 3508; // A4 height in millimeters;
+    const imageWidth = 2480;
+    const imageHeight = 3508;
     const textOpacity = parseFloat(document.getElementById('text-opacity').value);
     const topMargin = parseInt(document.getElementById('top-margin').value);
     const bottomMargin = parseInt(document.getElementById('bottom-margin').value);
@@ -62,8 +62,7 @@ function generateImage() {
         });
 
         const image = canvas.toDataURL('image/png');
-        const outputImage = document.getElementById('output-image');
-        outputImage.src = image;
+        document.getElementById('output-image').src = image;
     }
 
     if (text) {
@@ -110,5 +109,4 @@ downloadButton.addEventListener('click', function () {
     link.click();
 });
 
-// Call the initial image generation
-generateImage();
+generateImage(); // Initial image generation
