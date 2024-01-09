@@ -14,7 +14,7 @@ _**NOTE:** Every Processing is done in your system. That's why **Better the syst
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
-- [Tests](#tests)
+- [Imgs](#imgs)
 - [License](#license)
 - [Questions](#questions)
 
@@ -41,6 +41,10 @@ If you would like to contribute to the Handwriting Homework Generator, please fo
 2. Create a new branch
 3. Make your changes
 4. Submit a pull request
+
+## Images
+![Project Layout](https://github.com/Yandomith/HWsite/blob/main/img/Screenshot%202024-01-09%20231715.png)
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
