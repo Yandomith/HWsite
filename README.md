@@ -17,10 +17,10 @@ The Handwriting Homework Generator is a tool that converts digital text into han
 - [Questions](#questions)
 
 ## Installation
-NO Installation needed Visit Site and use it 
+NO Installation needed Visit Site (yandosmith.com.np) and use it 
 
 ## Usage
-Fill Up the Details according to your need and intrest.
+Fill Up the Details according to your need.
 
 ## Features
 Full controll over the Writing and Text Designes
