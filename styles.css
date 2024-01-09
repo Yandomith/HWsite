@@ -1,5 +1,9 @@
 body {
-    background: #bdc3c7;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
 }
 .container {
     margin-top: 50px;
