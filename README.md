@@ -44,6 +44,8 @@ If you would like to contribute to the Handwriting Homework Generator, please fo
 
 ## Images
 ![Project Layout](https://github.com/Yandomith/HWsite/blob/main/img/Screenshot%202024-01-09%20231715.png)
+![Project Use](https://github.com/Yandomith/HWsite/blob/main/img/Screenshot%202024-01-09%20232631.png)
+![Project Result](https://github.com/Yandomith/HWsite/blob/main/img/generated_image.png)
 
 
 ## License
