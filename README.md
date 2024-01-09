@@ -30,4 +30,24 @@ Full controll over the Writing and Text Designes
 4. Different notebook/Copy pages design
 5. Changable overlays for photorelastic mistakes and camera distortion
 6. changable line spacing and word spaing according to Needs
+7. Text Opacity to worn out looks
+
+## Contributing 
+If you would like to contribute to the Handwriting Homework Generator, please follow these steps:
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Questions
+If you have any questions or issues, please feel free to reach out.
+
+GitHub: Yandomith
+
+
+
 
