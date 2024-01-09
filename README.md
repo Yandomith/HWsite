@@ -6,6 +6,8 @@
 
 The Handwriting Homework Generator is a tool that converts digital text into handwritten format, allowing users to create handwritten homework easily.
 
+_**NOTE:** Every Processing is done in your system. That's why **Better the system faster the result**. _
+
 ## Table of Contents
 
 - [Installation](#installation)
