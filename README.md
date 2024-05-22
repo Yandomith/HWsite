@@ -19,7 +19,7 @@ _**NOTE:** Every Processing is done in your system. That's why **Better the syst
 - [Questions](#questions)
 
 ## Installation
-NO Installation needed Visit Site (yandosmith.com.np) and use it 
+NO Installation needed Visit Site (https://asignmentaid.netlify.app/) and use it 
 
 ## Usage
 Fill Up the Details according to your need.
